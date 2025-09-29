@@ -1,0 +1,13 @@
+
+<div class="popup-overlay" *ngIf="isPopupVisible" (click)="handleClose()">
+
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <h2>🥳 Olá! Seja Bem-Vindo(a) à nossa aplicação!</h2>
+    <p>É um prazer ter você aqui. Explore todas as nossas novas funcionalidades.</p>
+    
+    <button class="close-button" (click)="handleClose()">
+      Começar
+    </button>
+  </div>
+
+</div>

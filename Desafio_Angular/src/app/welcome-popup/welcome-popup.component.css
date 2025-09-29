@@ -1,0 +1,68 @@
+/* src/app/welcome-popup/welcome-popup.component.css */
+
+/* 1. Estilo do Overlay (Camada escura que cobre a tela) */
+.popup-overlay {
+  position: fixed; /* Fixo na janela do navegador */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  z-index: 1000; /* Garante que fique acima de todo o resto */
+  display: flex; /* Para centralizar */
+  justify-content: center;
+  align-items: center;
+  
+  /* Animação de entrada suave */
+  transition: opacity 0.3s ease;
+}
+
+/* 2. Estilo da Caixa de Conteúdo */
+.popup-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px; /* Largura máxima da caixa */
+  text-align: center;
+  color: #333;
+  
+  /* Animação para "saltar" ao entrar */
+  transform: scale(1);
+  animation: popIn 0.3s ease-out;
+}
+
+.popup-content h2 {
+  color: #007bff; /* Cor azul de destaque */
+  margin-top: 0;
+}
+
+/* 3. Estilo do Botão */
+.close-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+/* 4. Keyframes para a animação de entrada */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
